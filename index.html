@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepler Tower - Biểu Tượng Kiêu Hãnh - Dấu Ấn Thời Đại</title>
+    <meta name="description" content="Kepler Tower - Tháp đôi hạng sang tại Tây Nam Hà Nội, biểu tượng kiêu hãnh, dấu ấn thời đại">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #0E1016;
+            --dark-bg-lighter: #121824;
+            --gold: #D4AF37;
+            --gold-hover: #C18F2B;
+            --navy: #1A3A5F;
+            --white: #F5F5F5;
+            --spacing-xs: 8px;
+            --spacing-s: 16px;
+            --spacing-m: 24px;
+            --spacing-l: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+        
+        .text-gold {
+            color: var(--gold);
+        }
+        
+        .bg-gold {
+            background-color: var(--gold);
+        }
+        
+        .bg-navy {
+            background-color: var(--navy);
+        }
+        
+        .bg-dark-lighter {
+            background-color: var(--dark-bg-lighter);
+        }
+        
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .container {
+            max-width: 1440px;
+            padding: 0 var(--spacing-xl);
+            margin: 0 auto;
+        }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--dark-bg);
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 15px 32px;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--gold);
+            color: var(--dark-bg);
+            transform: scale(1.03);
+        }
+        
+        .btn-tertiary {
+            color: var(--gold);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-tertiary:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--dark-bg);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .overlay-gradient {
+            background: linear-gradient(to right, rgba(14, 16, 22, 0.85), rgba(26, 58, 95, 0.7));
+        }
+        
+        .hero-content {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .feature-card {
+            background: linear-gradient(145deg, rgba(14, 16, 22, 0.7), rgba(26, 58, 95, 0.2));
+            border: 1px solid rgba(26, 58, 95, 0.3);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--gold);
+        }
+        
+        .amenity-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .amenity-item img {
+            transition: all 0.5s ease;
+        }
+        
+        .amenity-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .amenity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(14, 16, 22, 0.9), transparent);
+            padding: var(--spacing-m);
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .amenity-item:hover .amenity-overlay {
+            transform: translateY(0);
+        }
+        
+        .apartment-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .apartment-card img {
+            transition: all 0.5s ease;
+        }
+        
+        .apartment-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .apartment-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(14, 16, 22, 0.9), transparent);
+            padding: var(--spacing-m);
+        }
+        
+        .apartment-tag {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--dark-bg);
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-right: 8px;
+        }
+        
+        .floor-plan {
+            position: relative;
+        }
+        
+        .floor-plan img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .hotspot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+        
+        .hotspot:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.3);
+        }
+        
+        .hotspot-info {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--dark-bg);
+            border: 1px solid var(--gold);
+            padding: var(--spacing-s);
+            min-width: 200px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .hotspot:hover .hotspot-info {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-m);
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 3/2;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(14, 16, 22, 0.8), transparent);
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--spacing-m);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .zoom-modal {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(14, 16, 22, 0.95);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .zoom-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .zoom-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .zoom-content img {
+            max-width: 100%;
+            max-height: 90vh;
+        }
+        
+        .zoom-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .popup-form {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(14, 16, 22, 0.95);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .popup-form.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .form-container {
+            background-color: var(--dark-bg-lighter);
+            border: 1px solid var(--gold);
+            padding: var(--spacing-xl);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        
+        .form-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--white);
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-m);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-bottom: 2px solid var(--gold);
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-bottom: 2px solid var(--white);
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--gold);
+            color: var(--dark-bg);
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--gold-hover);
+        }
+
+        .developer-logo {
+            height: 80px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .developer-logo:hover {
+            opacity: 1;
+            filter: none;
+        }
+        
+        .social-icon {
+            color: var(--white);
+            font-size: 24px;
+            margin-right: var(--spacing-s);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--gold);
+            transform: scale(1.1);
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: var(--spacing-m) 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(14, 16, 22, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-s) 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin-left: var(--spacing-m);
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background-color: var(--dark-bg);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: var(--spacing-xl) var(--spacing-m);
+                transition: all 0.3s ease;
+                z-index: 101;
+            }
+            
+            .nav-links.active {
+                right: 0;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+            }
+            
+            .nav-links li {
+                margin: var(--spacing-s) 0;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                font-size: 18px;
+                display: block;
+                padding: var(--spacing-s) 0;
+            }
+            
+            .mobile-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            :root {
+                --spacing-xl: 32px;
+                --spacing-xxl: 48px;
+            }
+            
+            .container {
+                padding: 0 var(--spacing-m);
+            }
+            
+            h1 {
+                font-size: 40px;
+                line-height: 48px;
+            }
+            
+            h2 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+            
+            .hero-content {
+                text-align: center;
+                padding: var(--spacing-xl) 0;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Custom animations */
+        [data-aos="gold-fade-up"] {
+            opacity: 0;
+            transform: translateY(50px);
+            transition-property: transform, opacity;
+        }
+        
+        [data-aos="gold-fade-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: var(--white);
+            opacity: 0.5;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background-color: var(--gold);
+            opacity: 1;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--gold);
+        }
+        
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            color: var(--gold-hover);
+        }
+
+        /* Simulating parallax since we can't use fixed backgrounds in PDFs */
+        .fake-parallax {
+            position: relative;
+        }
+        
+        .fake-parallax-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .fake-parallax-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: var(--dark-bg-lighter);
+            padding: var(--spacing-xl) 0 var(--spacing-m);
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-m);
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--gold);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--spacing-s);
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-m);
+            margin-top: var(--spacing-xl);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .contact-info {
+            margin-bottom: var(--spacing-s);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            color: var(--gold);
+            margin-right: var(--spacing-s);
+            font-size: 20px;
+            min-width: 24px;
+        }
+        
+        .gold-line {
+            width: 50px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: var(--spacing-m) 0;
+        }
+    </style>
+<style>
+.floorplan-infinity-slider {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    margin: 0 auto 32px auto;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.floorplan-infinity-slider::-webkit-scrollbar { display: none; }
+.floorplan-infinity-slider img {
+    height: 250px;
+    width: 400px;
+    max-width: 96vw;
+    object-fit: cover;
+    margin-right: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.17);
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.22s;
+}
+.floorplan-infinity-slider img:hover {
+    transform: scale(1.08);
+    z-index:3;
+}
+@media (max-width: 600px) {
+    .floorplan-infinity-slider img { width: 230px; height: 120px; margin-right:12px; }
+}
+</style>
+
+<style>
+.gold-text { color: #FFD700; font-weight: bold; background: linear-gradient(90deg, #FFD700, #BFA140); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; letter-spacing: 1px;}
+.badge-gold {
+    position: absolute; top: 16px; left: 20px;
+    background: linear-gradient(90deg,#FFD700 60%,#fff8dc 100%);
+    color: #4A4200; font-weight: 700;
+    font-size: 16px; padding: 4px 18px;
+    border-radius: 32px; box-shadow:0 2px 12px #fff6 0.7;
+    letter-spacing: 2px;
+}
+.tag-list { list-style:none; display:flex; gap:10px; flex-wrap:wrap; padding:0;}
+.tag-list li {
+    background:rgba(255,215,0,0.14);
+    color:#FFD700;
+    border-radius: 16px;
+    padding:3px 12px;
+    font-size:15px;
+    font-weight:500;
+    margin-bottom:4px;
+    box-shadow:0 1px 4px #0002;
+}
+.apartment-card {
+    transition: box-shadow 0.2s, transform 0.22s;
+    border: none;
+}
+.apartment-card:hover {
+    box-shadow:0 10px 32px #fff3;
+    transform:translateY(-7px) scale(1.028);
+}
+</style>
+  <style>
+    html, body { max-width: 100vw; overflow-x: hidden !important; }
+    img, video, iframe { max-width: 100%; height: auto; display: block; }
+    .fixed-contact-icons {
+      position: fixed;
+      right: 7px;
+      bottom: 16px;
+      z-index: 99990;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+    .fixed-contact-icons .fixed-icon {
+      pointer-events: auto;
+    }
+    .fixed-icon {
+      box-sizing: border-box;
+      width: 50px; height: 50px;
+      font-size: 1.5rem;
+      margin-right: 0;
+    }
+    .fixed-icon .pulse, .fixed-icon .glow {
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 105%; height: 105%;
+    }
+    @media (max-width: 700px) {
+      .fixed-contact-icons {
+        right: 2px;
+        bottom: 7px;
+        gap: 7px;
+      }
+      .fixed-icon { width: 38px; height: 38px; font-size: 1rem; }
+      .fixed-icon .pulse, .fixed-icon .glow { width: 88%; height: 88%; }
+    }
+  </style>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '680720567872772'); // Thay bằng ID Pixel thật
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=ID_PIXEL_CUA_BAN&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">KEPLER <span>TOWER</span></a>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <button class="mobile-close" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <li><a href="#overview">Tổng quan</a></li>
+                <li><a href="#location">Vị trí</a></li>
+                <li><a href="#amenities">Tiện ích</a></li>
+                <li><a href="#apartments">Căn hộ mẫu</a></li>
+                <li><a href="#floor-plan">Mặt bằng</a></li>
+                <li><a href="#developer">Chủ đầu tư</a></li>
+                <li><a href="#contact" class="btn-tertiary">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="fake-parallax" id="hero">
+    <!-- Video nền -->
+    <div class="fake-parallax-bg">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover absolute inset-0 z-0">
+            <source src="C:\abubu\assets\hero\4.1.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+        <div class="overlay-gradient w-full h-full absolute inset-0 z-10"></div>
+    </div>
+    <div class="fake-parallax-content relative z-20">
+        <div class="container hero-content">
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl mb-4 uppercase text-gold tracking-wide leading-tight">
+                    Kepler Tower<br>Biểu Tượng Kiêu Hãnh<br>Dấu Ấn Thời Đại
+                </h1>
+                <h2 class="text-xl md:text-2xl mb-8 quote text-gold-hover">
+                    Tháp đôi hạng sang tại Tây Nam Hà Nội – Tuyên ngôn của chất sống tinh hoa
+                </h2>
+                <button class="btn-primary mt-4 flex items-center" id="consultationBtn">
+                    <i class="fas fa-file-alt mr-2"></i> NHẬN TƯ VẤN ĐẦU TƯ
+                </button>
+            </div>
+            <div class="scroll-down">
+                <a href="#overview">
+                    <i class="fas fa-chevron-down text-white text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Overview Section -->
+    <section class="section-padding" id="overview">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <blockquote class="quote text-2xl md:text-3xl lg:text-4xl leading-relaxed text-gold-hover pr-0 md:pr-8">
+                        "Trong lòng Hà Nội ngàn năm văn hiến, giữa nhịp sống hiện đại hối hả, Kepler Tower vươn mình kiêu hãnh."
+                    </blockquote>
+                    <div class="gold-line"></div>
+                    <p class="text-lg mb-8">Không chỉ là một tòa tháp, công trình còn là một biểu tượng kiến trúc, một dấu ấn của thời đại, nơi những giá trị trường tồn gặp gỡ tinh thần tiên phong, là nơi cuộc sống thăng hoa trong từng khoảnh khắc.</p>
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="C:\abubu\assets\overview\4.2.jpg" alt="Kepler Tower" class="w-full h-auto">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Chủ đầu tư</h4>
+                            <p>TSQ Việt Nam</p>
+                        </div>
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Thiết kế</h4>
+                            <p>IDT Úc</p>
+                        </div>
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Quy mô</h4>
+                            <p>2 tòa tháp (HH-01: 41 tầng, HH-02: 37 tầng)</p>
+                        </div>
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Chiều cao</h4>
+                            <p>HH-01: 155,45m<br>HH-02: 139,25m</p>
+                        </div>
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Loại hình</h4>
+                            <p>Căn hộ hạng sang (1-3PN)</p>
+                        </div>
+                        <div class="feature-card p-6 rounded-lg">
+                            <h4 class="text-gold mb-2">Sở hữu</h4>
+                            <p>Lâu dài, sổ hồng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+<section class="section-padding bg-dark-lighter" id="location">
+    <div class="container">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">VỊ TRÍ - KẾT NỐI VÀNG</h2>
+        <div class="gold-line mx-auto"></div>
+        <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Tâm điểm Tây Nam Hà Nội – Cửa ngõ kết nối vùng kinh tế động lực</p>
+
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8" data-aos="fade-right" data-aos-duration="1000">
+                <div class="relative overflow-hidden rounded-lg">
+                    <img src="C:\abubu\assets\map\4.3.png" alt="Bản đồ vị trí Kepler Tower" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                <h3 class="text-2xl md:text-3xl mb-6">Địa chỉ: KĐT Mỗ Lao, Q. Hà Đông, TP. Hà Nội</h3>
+                <p class="mb-6 text-lg">Vị trí đắc địa của Kepler Tower mang đến sự kết nối thuận tiện với các khu vực trọng điểm của thành phố. Cư dân sẽ được tận hưởng cuộc sống tiện nghi với hệ thống giao thông phát triển và các tiện ích xung quanh.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="feature-card p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-subway text-gold text-xl mr-3"></i>
+                            <h4>Metro Văn Quán</h4>
+                        </div>
+                        <p>Kết nối tiện lợi với hệ thống Metro trong tương lai</p>
+                    </div>
+                    <div class="feature-card p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-bus-alt text-gold text-xl mr-3"></i>
+                            <h4>BRT nhanh</h4>
+                        </div>
+                        <p>Di chuyển thuận tiện bằng hệ thống xe buýt nhanh</p>
+                    </div>
+                    <div class="feature-card p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-road text-gold text-xl mr-3"></i>
+                            <h4>Trục đường 70</h4>
+                        </div>
+                        <p>Kết nối trực tiếp với trung tâm thành phố</p>
+                    </div>
+                    <div class="feature-card p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-city text-gold text-xl mr-3"></i>
+                            <h4>Trung tâm mới Hà Đông</h4>
+                        </div>
+                        <p>Nằm trong khu vực phát triển năng động của thành phố</p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <button class="btn-secondary" id="mapBtn">
+                        <i class="fas fa-map-marked-alt mr-2"></i> XEM BẢN ĐỒ CHI TIẾT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL GOOGLE MAP -->
+<div id="mapModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full relative">
+        <button id="closeMapModal" class="absolute top-2 right-2 text-2xl text-gray-700 hover:text-red-600">&times;</button>
+        <div class="p-4">
+            <h4 class="text-xl mb-3 font-bold text-center">Vị trí KĐT Mỗ Lao, Q. Hà Đông, TP. Hà Nội</h4>
+            <iframe
+                src="https://www.google.com/maps?q=KĐT%20Mỗ%20Lao,%20Hà%20Đông,%20Hà%20Nội&output=embed"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="text-center mt-3">
+                <a href="https://www.google.com/maps/place/KĐT+Mỗ+Lao,+Hà+Đông,+Hà+Nội" target="_blank" class="text-blue-600 underline">Xem bản đồ trên Google Maps</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Amenities Section -->
+    <section class="section-padding" id="amenities">
+        <div class="container">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">TIỆN ÍCH SỐNG - SỐNG TÍCH HỢP, ĐA TRẢI NGHIỆM</h2>
+            <div class="gold-line mx-auto"></div>
+            <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">12 tầng thương mại tích hợp – Mọi dịch vụ trong một bước chân</p>
+            
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\bb.jpg" alt="Bể bơi Olympic" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-swimming-pool text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">Thể thao/nghỉ dưỡng</h4>
+                            </div>
+                            <p>Bể bơi Olympic, gym, spa, golf ảo</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Bể bơi Olympic</h4>
+                            <p>Tận hưởng không gian bơi lội tiêu chuẩn quốc tế với tầm nhìn toàn cảnh thành phố, tạo nên trải nghiệm thư giãn tuyệt vời.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\te.jpg" alt="Khu vui chơi trẻ em" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-child text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">Khu vui chơi/giải trí</h4>
+                            </div>
+                            <p>Khu vui chơi trẻ em hiện đại, an toàn</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Khu vui chơi trẻ em</h4>
+                            <p>Không gian vui chơi rộng rãi, thiết kế sinh động với các thiết bị hiện đại, an toàn, kích thích phát triển thể chất và trí tuệ cho trẻ.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\tk.jpg" alt="Không gian tiếp khách" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-briefcase text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">Tiếp khách/làm việc</h4>
+                            </div>
+                            <p>Sảnh, thư viện, co-working, event</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Không gian làm việc</h4>
+                            <p>Khu vực co-working sang trọng, trang bị đầy đủ tiện nghi, là nơi lý tưởng để cư dân làm việc, gặp gỡ đối tác và tổ chức sự kiện.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\sd.jpg" alt="Sảnh đón khách sang trọng" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-shopping-bag text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">Mua sắm/dịch vụ</h4>
+                            </div>
+                            <p>Nhà hàng, café, ngân hàng, thời trang</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Không gian thương mại</h4>
+                            <p>Hệ thống cửa hàng, nhà hàng, café đẳng cấp đáp ứng mọi nhu cầu mua sắm, ẩm thực, giải trí của cư dân ngay trong khuôn viên dự án.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\pk.jpg" alt="Phòng khám cao cấp" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-heartbeat text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">Chăm sóc sức khỏe</h4>
+                            </div>
+                            <p>Phòng khám, nha khoa, dịch vụ y tế</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Dịch vụ y tế</h4>
+                            <p>Khu vực chăm sóc sức khỏe hiện đại với đội ngũ nhân viên chuyên nghiệp, đảm bảo cư dân luôn được chăm sóc tốt nhất ngay tại nơi sinh sống.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="amenity-item rounded-lg overflow-hidden h-full">
+                        <img src="C:\abubu\assets\tc\an.jpg" alt="Hệ thống an ninh" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-dark-lighter">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-shield-alt text-gold text-xl mr-3"></i>
+                                <h4 class="text-xl">An ninh/bảo vệ</h4>
+                            </div>
+                            <p>Đỗ xe thông minh, báo cháy, tầng lánh nạn</p>
+                        </div>
+                        <div class="amenity-overlay">
+                            <h4 class="text-xl mb-2 text-gold">Hệ thống an ninh</h4>
+                            <p>Trang bị công nghệ an ninh hiện đại với camera 24/7, đội ngũ bảo vệ chuyên nghiệp, đảm bảo an toàn tuyệt đối cho cư dân.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-navy rounded-lg p-8 mt-8" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl text-gold mb-4">ALL-IN-ONE LIFESTYLE</h3>
+                        <p class="text-lg">Kepler Tower mang đến trải nghiệm sống hoàn hảo với hệ sinh thái tiện ích đa dạng, từ mua sắm, giải trí đến chăm sóc sức khỏe, tất cả trong một không gian sống đẳng cấp. Đây không chỉ là nơi ở, mà còn là không gian sống trọn vẹn, nơi mọi nhu cầu của cuộc sống hiện đại đều được đáp ứng một cách tinh tế và đẳng cấp.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 text-center">
+                        <div class="text-5xl text-gold font-bold">12+</div>
+                        <p class="text-xl mt-2">Tầng thương mại tích hợp</p>
+                        <button class="btn-secondary mt-4">XEM THÊM TIỆN ÍCH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartments Section -->
+    <!-- Apartments Section -->
+<section class="section-padding bg-dark-lighter" id="apartments">
+    <div class="container">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center gold-text" data-aos="fade-up" data-aos-duration="1000">
+            CĂN HỘ MẪU - KHÔNG GIAN SỐNG CỦA GIỚI ELITE
+        </h2>
+        <div class="gold-line mx-auto"></div>
+        <p class="text-center text-xl mb-12 gold-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Thiết kế tinh tế, không gian tối ưu, nội thất cao cấp
+        </p>
+        <div class="flex flex-col md:flex-row gap-8 justify-center">
+            <!-- Căn hộ 1PN -->
+            <div class="apartment-card shadow-2xl bg-[#232218]/80 rounded-2xl p-0 overflow-hidden max-w-sm mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="relative group">
+                    <img src="assets/ch/1pn/1.1.png" alt="Căn hộ 1 phòng ngủ" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <span class="badge-gold">1PN</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-gold mb-2">Căn hộ 1 Phòng ngủ <span class="text-base text-slate-400 ml-2">45,6m²</span></h3>
+                    <p class="mb-3 text-slate-300 italic">Thiết kế tinh tế, tối ưu cho cá nhân & cặp đôi.</p>
+                    <ul class="tag-list mb-4">
+                        <li>Cửa Low-E</li>
+                        <li>Khóa từ thông minh</li>
+                        <li>Điều hòa âm trần</li>
+                    </ul>
+                    <button class="btn-tertiary gallery-btn" data-type="1pn">
+                        <i class="fas fa-images mr-2"></i> Xem thêm ảnh
+                    </button>
+                </div>
+            </div>
+            <!-- Căn hộ 2PN -->
+            <div class="apartment-card shadow-2xl bg-[#232218]/80 rounded-2xl p-0 overflow-hidden max-w-sm mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="relative group">
+                    <img src="assets/ch/2pn/2.1.png" alt="Căn hộ 2 phòng ngủ" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <span class="badge-gold">2PN</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-gold mb-2">Căn hộ 2 Phòng ngủ <span class="text-base text-slate-400 ml-2">76,7m²</span></h3>
+                    <p class="mb-3 text-slate-300 italic">Không gian hiện đại cho gia đình trẻ.</p>
+                    <ul class="tag-list mb-4">
+                        <li>Cửa chống cháy EI30</li>
+                        <li>Nội thất nhập khẩu</li>
+                        <li>Hệ cấp gió tươi</li>
+                    </ul>
+                    <button class="btn-tertiary gallery-btn" data-type="2pn">
+                        <i class="fas fa-images mr-2"></i> Xem thêm ảnh
+                    </button>
+                </div>
+            </div>
+            <!-- Căn hộ 3PN -->
+            <div class="apartment-card shadow-2xl bg-[#232218]/80 rounded-2xl p-0 overflow-hidden max-w-sm mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="relative group">
+                    <img src="assets/ch/3pn/3.1.png" alt="Căn hộ 3 phòng ngủ" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <span class="badge-gold">3PN</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-gold mb-2">Căn hộ 3 Phòng ngủ <span class="text-base text-slate-400 ml-2">122,6m²</span></h3>
+                    <p class="mb-3 text-slate-300 italic">Sang trọng, đẳng cấp cho gia đình đa thế hệ.</p>
+                    <ul class="tag-list mb-4">
+                        <li>Ban công rộng</li>
+                        <li>Bếp cao cấp</li>
+                        <li>Phòng gia đình</li>
+                    </ul>
+                    <button class="btn-tertiary gallery-btn" data-type="3pn">
+                        <i class="fas fa-images mr-2"></i> Xem thêm ảnh
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <button class="btn-primary" id="viewModelBtn">
+                <i class="fas fa-home mr-2"></i> ĐĂNG KÝ XEM NHÀ MẪU
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Floor Plan Section -->
+<section class="section-padding" id="floor-plan">
+    <div class="container">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">MẶT BẰNG - TINH HOA KIẾN TRÚC</h2>
+        <div class="gold-line mx-auto"></div>
+        <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Thiết kế thông minh, tối ưu công năng, đảm bảo riêng tư
+        </p>
+
+        <!-- Slider ảnh mặt bằng (infinity, không thanh cuộn) -->
+        <div class="relative" style="position:relative; margin-bottom:40px;">
+            <div class="floorplan-infinity-slider" id="infinitySlider">
+                <img src="C:\abubu\assets\mb\1.png" alt="Mặt bằng 1" />
+                <img src="C:\abubu\assets\mb\2.png" alt="Mặt bằng 2" />
+                <img src="C:\abubu\assets\mb\3.png" alt="Mặt bằng 3" />
+                <img src="C:\abubu\assets\mb\4.png" alt="Mặt bằng 4" />
+                <img src="C:\abubu\assets\mb\5.png" alt="Mặt bằng 5" />
+            </div>
+            <!-- Lightbox modal phóng to -->
+            <div id="lightboxModal" style="display:none;position:fixed;z-index:10000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+                <span id="lightboxClose" style="position:absolute;top:30px;right:40px;font-size:45px;cursor:pointer;color:#fff;font-weight:bold;">&times;</span>
+                <img id="lightboxImg" src="" alt="Phóng to mặt bằng"
+                    style="max-width:92vw;max-height:80vh;border-radius:12px;box-shadow:0 2px 16px #000;">
+                <span id="lightboxPrev" style="position:absolute;left:40px;top:50%;transform:translateY(-50%);font-size:50px;cursor:pointer;color:#fff;font-weight:bold;">&#10094;</span>
+                <span id="lightboxNext" style="position:absolute;right:40px;top:50%;transform:translateY(-50%);font-size:50px;cursor:pointer;color:#fff;font-weight:bold;">&#10095;</span>
+            </div>
+        </div>
+
+        <!-- Giữ nguyên các phần mô tả, tiêu chuẩn bàn giao -->
+        <div class="flex flex-col md:flex-row mt-8">
+            <div class="w-full md:w-1/2 md:pr-4 mb-6 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bg-dark-lighter p-6 rounded-lg h-full">
+                    <h3 class="text-xl text-gold mb-4">Thiết kế thông minh</h3>
+                    <p>Mỗi căn hộ tại Kepler Tower được thiết kế tỉ mỉ, tối ưu hóa không gian sử dụng, đảm bảo ánh sáng tự nhiên và thông gió hiệu quả. Các phòng chức năng được bố trí hợp lý, tạo nên không gian sống lý tưởng cho mọi nhu cầu.</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn-tertiary">
+                            <i class="fas fa-download mr-2"></i> Tải bản vẽ mặt bằng
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-4" data-aos="fade-left" data-aos-duration="1000">
+                <div class="bg-dark-lighter p-6 rounded-lg h-full">
+                    <h3 class="text-xl text-gold mb-4">Tiêu chuẩn bàn giao</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Cửa chính an toàn với khóa từ thông minh</li>
+                        <li>Hệ thống cửa sổ kính Low-E cách âm, cách nhiệt</li>
+                        <li>Sàn gỗ công nghiệp cao cấp phòng khách và phòng ngủ</li>
+                        <li>Thiết bị vệ sinh nhập khẩu cao cấp</li>
+                        <li>Điều hòa âm trần, hệ thống cấp gió tươi</li>
+                        <li>Tủ bếp và thiết bị bếp nhập khẩu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Highlights Section -->
+    <section class="section-padding bg-dark-lighter" id="highlights">
+        <div class="container">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">ĐIỂM NHẤN TINH HOA - BIỂU TƯỢNG SỐNG THƯỢNG LƯU</h2>
+            <div class="gold-line mx-auto"></div>
+            <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Những giá trị đặc quyền chỉ có tại Kepler Tower</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative rounded-lg overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="C:\abubu\assets\tc\bb.jpg" alt="Bể bơi Olympic" class="w-full h-72 object-cover">
+                    <div class="absolute inset-0 bg-navy bg-opacity-50 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <h3 class="text-2xl text-gold mb-4">Bể bơi Olympic</h3>
+                            <p>Bể bơi tiêu chuẩn Olympic với tầm nhìn panorama, mang đến trải nghiệm thư giãn tuyệt vời giữa không gian hiện đại, sang trọng.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-lg overflow-hidden" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="C:\abubu\assets\tc\ct.png" alt="Tiện ích người cao tuổi" class="w-full h-72 object-cover">
+                    <div class="absolute inset-0 bg-navy bg-opacity-50 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <h3 class="text-2xl text-gold mb-4">Tiện ích người cao tuổi</h3>
+                            <p>Không gian chăm sóc sức khỏe chuyên biệt dành cho người cao tuổi, với các dịch vụ đặc quyền và thiết kế phù hợp.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-lg overflow-hidden" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <img src="C:\abubu\assets\tc\nt.jpg" alt="Nội thất cao cấp" class="w-full h-72 object-cover">
+                    <div class="absolute inset-0 bg-navy bg-opacity-50 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <h3 class="text-2xl text-gold mb-4">Nội thất cao cấp</h3>
+                            <p>Nội thất nhập khẩu từ các thương hiệu hàng đầu thế giới, mang đến không gian sống đẳng cấp với chất lượng vượt trội.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-lg overflow-hidden" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                    <img src="C:\abubu\assets\tc\tn.jpg" alt="Tầm nhìn panorama" class="w-full h-72 object-cover">
+                    <div class="absolute inset-0 bg-navy bg-opacity-50 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <h3 class="text-2xl text-gold mb-4">Tầm nhìn panorama</h3>
+                            <p>Từ căn hộ Kepler Tower, cư dân được chiêm ngưỡng toàn cảnh thành phố với góc nhìn không giới hạn, tạo nên trải nghiệm sống độc đáo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="section-padding" id="developer">
+        <div class="container">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">CHỦ ĐẦU TƯ - UY TÍN HÀNG ĐẦU, ĐẢM BẢO DỰ ÁN</h2>
+            <div class="gold-line mx-auto"></div>
+            <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">TSQ Việt Nam - Kinh nghiệm và tâm huyết kiến tạo công trình biểu tượng</p>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="text-2xl md:text-3xl text-gold mb-6">TSQ Việt Nam</h3>
+                    <p class="text-lg mb-6">Thành lập năm 2006, TSQ Việt Nam là công ty được sáng lập bởi các chuyên gia, doanh nhân Việt Kiều Ba Lan với tầm nhìn phát triển những công trình kiến trúc đẳng cấp quốc tế tại Việt Nam.</p>
+                    
+                    <h4 class="text-xl text-gold mb-4">Triết lý kinh doanh</h4>
+                    <div class="flex items-center mb-6">
+                        <div class="w-1/3 text-center">
+                            <i class="fas fa-handshake text-gold text-3xl mb-2"></i>
+                            <p>Trung thực</p>
+                        </div>
+                        <div class="w-1/3 text-center">
+                            <i class="fas fa-leaf text-gold text-3xl mb-2"></i>
+                            <p>Bền vững</p>
+                        </div>
+                        <div class="w-1/3 text-center">
+                            <i class="fas fa-medal text-gold text-3xl mb-2"></i>
+                            <p>Chất lượng</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-xl text-gold mb-4">Bảo trợ tài chính</h4>
+                    <p class="mb-6">Dự án được bảo trợ tài chính bởi MB Bank, đảm bảo năng lực tài chính vững mạnh và tiến độ xây dựng đúng cam kết.</p>
+                    
+                    <h4 class="text-xl text-gold mb-4">Phát triển & phân phối</h4>
+                    <p>Đơn vị phát triển: Đô thị Nam Sơn Invest<br>Đơn vị phân phối chính thức: MS Real</p>
+                </div>
+                
+                <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-dark-lighter p-6 rounded-lg">
+                        <img src="C:\abubu\assets\logo\1.png" alt="Kepler Tower Logo" class="w-full h-auto mb-6">
+                        
+                        <div class="divider"></div>
+                        
+                        <h4 class="text-xl text-center text-gold mb-4">Các dự án tiêu biểu</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-navy bg-opacity-50 rounded-lg text-center">
+                                <h5 class="text-gold">The Golden Palm</h5>
+                                <p class="text-sm">Hà Nội</p>
+                            </div>
+                            <div class="p-4 bg-navy bg-opacity-50 rounded-lg text-center">
+                                <h5 class="text-gold">TSQ Galaxy</h5>
+                                <p class="text-sm">Hà Nội</p>
+                            </div>
+                            <div class="p-4 bg-navy bg-opacity-50 rounded-lg text-center">
+                                <h5 class="text-gold">TSQ Euroland</h5>
+                                <p class="text-sm">Hà Nội</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="section-padding bg-dark-lighter" id="virtual-tour">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4">TRẢI NGHIỆM THỰC TẾ ẢO</h2>
+                <div class="gold-line mx-auto"></div>
+                <p class="text-xl mb-8">Khám phá không gian sống Kepler Tower qua công nghệ VR 360°</p>
+                
+                <div class="relative cursor-pointer mx-auto max-w-3xl" id="vrTour">
+                    <img src="C:\abubu\assets\images\4.9.jpg" alt="VR 360 Experience" class="w-full h-auto rounded-lg">
+                    <div class="absolute inset-0 flex items-center justify-center bg-dark-bg bg-opacity-50 rounded-lg">
+                        <div class="text-center">
+                            <div class="bg-gold rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-vr-cardboard text-3xl text-dark-bg"></i>
+                            </div>
+                            <h3 class="text-2xl mb-2">TRẢI NGHIỆM VR 360° CĂN HỘ</h3>
+                            <p>Khám phá thực tế ảo 360° toàn cảnh không gian căn hộ mẫu Kepler Tower</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section class="section-padding" id="contact">
+    <div class="container">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">LIÊN HỆ NGAY</h2>
+        <div class="gold-line mx-auto"></div>
+        <p class="text-center text-xl mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Đặt lịch tư vấn hoặc tham quan nhà mẫu</p>
+        
+        <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+            <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bg-dark-lighter p-8 rounded-lg h-full">
+                    <h3 class="text-2xl text-gold mb-6">Thông tin liên hệ</h3>
+                    
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 class="font-semibold">Địa chỉ</h4>
+                            <p>KĐT Mỗ Lao, P. Mộ Lao, Q. Hà Đông, Hà Nội</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4 class="font-semibold">Điện thoại</h4>
+                            <p><a href="tel:0916865365" class="hover:text-gold">0916 865 365</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p><a href="mailto:bacmanhtv8386@gmail.com" class="hover:text-gold">bacmanhtv8386@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <i class="fab fa-facebook-f"></i>
+                        <div>
+                            <h4 class="font-semibold">Facebook</h4>
+                            <p><a href="https://www.facebook.com/profile.php?id=61574578577645" target="_blank" class="hover:text-gold">Kepler Tower Official</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl text-gold mb-4">Kết nối qua Zalo</h4>
+                        <img src="C:\abubu\assets\zalo\qr.jpg" alt="Zalo QR Code" class="w-48 h-auto">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="bg-dark-lighter p-8 rounded-lg h-full">
+                    <h3 class="text-2xl text-gold mb-6">Đăng ký nhận thông tin</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="block mb-2">Họ và tên <span class="text-gold">*</span></label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="block mb-2">Số điện thoại <span class="text-gold">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest" class="block mb-2">Bạn quan tâm đến <span class="text-gold">*</span></label>
+                            <select id="interest" name="interest" class="form-input" required>
+                                <option value="" selected disabled>-- Chọn loại căn hộ --</option>
+                                <option value="1pn">Căn hộ 1 phòng ngủ</option>
+                                <option value="2pn">Căn hộ 2 phòng ngủ</option>
+                                <option value="3pn">Căn hộ 3 phòng ngủ</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="block mb-2">Nội dung</label>
+                            <textarea id="message" name="message" rows="4" class="form-input"></textarea>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <button type="submit" class="form-submit">
+                                <i class="fas fa-paper-plane mr-2"></i> GỬI THÔNG TIN
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Thông báo gửi thành công -->
+                    <div id="submitSuccessMsg" style="display:none;color:#18d26e;font-weight:600;text-align:center;margin-top:20px;">
+                        Gửi thông tin thành công! Chúng tôi sẽ liên hệ lại với bạn sớm nhất.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mt-12" data-aos="fade-up" data-aos-duration="1000">
+            <button class="btn-primary" id="consultationBtnFooter">
+                <i class="fas fa-file-alt mr-2"></i> NHẬN TƯ VẤN ĐẦU TƯ
+            </button>
+            
+            <button class="btn-secondary" id="directContactBtn">
+                <i class="fas fa-phone-alt mr-2"></i> LIÊN HỆ TRỰC TIẾP
+            </button>
+            
+            <button class="btn-primary" id="viewModelBtnFooter">
+                <i class="fas fa-home mr-2"></i> ĐĂNG KÝ XEM NHÀ MẪU
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <a href="#" class="footer-logo">KEPLER <span>TOWER</span></a>
+                    <p class="mb-6">Biểu tượng kiêu hãnh – Dấu ấn thời đại<br>Tháp đôi hạng sang tại Tây Nam Hà Nội</p>
+                    <div class="mb-6">
+                        <a href="https://www.facebook.com/profile.php?id=61574578577645" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h4 class="text-xl mb-6">Liên kết nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="#overview">Tổng quan dự án</a></li>
+                        <li><a href="#location">Vị trí đắc địa</a></li>
+                        <li><a href="#amenities">Tiện ích đẳng cấp</a></li>
+                        <li><a href="#apartments">Căn hộ mẫu</a></li>
+                        <li><a href="#floor-plan">Mặt bằng tầng điển hình</a></li>
+                        <li><a href="#developer">Chủ đầu tư</a></li>
+                    </ul>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4">
+                    <h4 class="text-xl mb-6">Thông tin liên hệ</h4>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>KĐT Mỗ Lao, P. Mộ Lao, Q. Hà Đông, Hà Nội</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><a href="tel:0916865365">0916 865 365</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:bacmanhtv8386@gmail.com">bacmanhtv8386@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; 2023 Kepler Tower. All rights reserved.</p>
+                    <p>Developed by TSQ Việt Nam</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal">
+        <div class="zoom-content">
+            <button class="zoom-close" id="zoomClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="zoomImage" src="" alt="Enlarged image">
+        </div>
+    </div>
+
+    <!-- Contact Popup -->
+    <div class="popup-form" id="contactPopup">
+        <div class="form-container">
+            <button class="form-close" id="closeContactPopup">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 class="text-2xl text-gold mb-6 text-center">Đăng ký tư vấn đầu tư</h3>
+            
+            <form id="popupForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Họ và tên *" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" placeholder="Số điện thoại *" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <select class="form-input" required>
+                        <option value="" selected disabled>-- Chọn loại căn hộ --</option>
+                        <option value="1pn">Căn hộ 1 phòng ngủ</option>
+                        <option value="2pn">Căn hộ 2 phòng ngủ</option>
+                        <option value="3pn">Căn hộ 3 phòng ngủ</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Nội dung" rows="4" class="form-input"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane mr-2"></i> GỬI THÔNG TIN
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Direct Contact Popup -->
+    <div class="popup-form" id="directContactPopup">
+        <div class="form-container">
+            <button class="form-close" id="closeDirectContactPopup">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 class="text-2xl text-gold mb-6 text-center">Liên hệ trực tiếp</h3>
+            
+            <div class="flex flex-col items-center">
+                <div class="text-center mb-6">
+                    <i class="fas fa-phone-alt text-gold text-5xl mb-4"></i>
+                    <h4 class="text-xl mb-2">Gọi ngay</h4>
+                    <a href="tel:0916865365" class="text-2xl text-gold">0916 865 365</a>
+                </div>
+                
+                <div class="text-center mb-6">
+                    <i class="fab fa-facebook-messenger text-gold text-5xl mb-4"></i>
+                    <h4 class="text-xl mb-2">Messenger</h4>
+                    <a href="https://m.me/61574578577645" target="_blank" class="btn-secondary">
+                        <i class="fab fa-facebook-messenger mr-2"></i> Nhắn tin Messenger
+                    </a>
+                </div>
+                
+                <div class="text-center">
+                    <i class="fab fa-zalo text-gold text-5xl mb-4"></i>
+                    <h4 class="text-xl mb-2">Zalo</h4>
+                    <img src="C:\abubu\assets\zalo\qr.jpg" alt="Zalo QR Code" class="w-48 h-auto mx-auto mb-4">
+                    <a href="https://zalo.me/0916865365" target="_blank" class="btn-secondary">
+                        <i class="fas fa-qrcode mr-2"></i> Chat Zalo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Model Popup -->
+    <div class="popup-form" id="viewModelPopup">
+        <div class="form-container">
+            <button class="form-close" id="closeViewModelPopup">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 class="text-2xl text-gold mb-6 text-center">Đăng ký xem nhà mẫu</h3>
+            
+            <form id="viewModelForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Họ và tên *" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" placeholder="Số điện thoại *" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <input type="date" placeholder="Ngày tham quan *" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <select class="form-input" required>
+                        <option value="" selected disabled>-- Chọn loại căn hộ --</option>
+                        <option value="1pn">Căn hộ 1 phòng ngủ</option>
+                        <option value="2pn">Căn hộ 2 phòng ngủ</option>
+                        <option value="3pn">Căn hộ 3 phòng ngủ</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Ghi chú" rows="4" class="form-input"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-calendar-check mr-2"></i> ĐẶT LỊCH XEM NHÀ MẪU
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Apartment Swiper
+        const apartmentSwiper = new Swiper('#apartmentSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+        
+        window.onscroll = function() {
+            scrollFunction();
+        };
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenu = document.getElementById('closeMenu');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = navLinks.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Zoom modal functionality
+        const zoomModal = document.getElementById('zoomModal');
+        const zoomImage = document.getElementById('zoomImage');
+        const zoomClose = document.getElementById('zoomClose');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        function openZoomModal(imageSrc) {
+            zoomImage.src = imageSrc;
+            zoomModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeZoomModal() {
+            zoomModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        zoomClose.addEventListener('click', closeZoomModal);
+        
+        zoomModal.addEventListener('click', function(e) {
+            if (e.target === zoomModal) {
+                closeZoomModal();
+            }
+        });
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imageSrc = this.querySelector('img').src;
+                openZoomModal(imageSrc);
+            });
+        });
+        
+        // Contact Popup
+        const consultationBtn = document.getElementById('consultationBtn');
+        const consultationBtnFooter = document.getElementById('consultationBtnFooter');
+        const contactPopup = document.getElementById('contactPopup');
+        const closeContactPopup = document.getElementById('closeContactPopup');
+        
+        function openContactPopup() {
+            contactPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeContactPopupFn() {
+            contactPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        consultationBtn.addEventListener('click', openContactPopup);
+        consultationBtnFooter.addEventListener('click', openContactPopup);
+        closeContactPopup.addEventListener('click', closeContactPopupFn);
+        
+        contactPopup.addEventListener('click', function(e) {
+            if (e.target === contactPopup) {
+                closeContactPopupFn();
+            }
+        });
+        
+        // Direct Contact Popup
+        const directContactBtn = document.getElementById('directContactBtn');
+        const directContactPopup = document.getElementById('directContactPopup');
+        const closeDirectContactPopup = document.getElementById('closeDirectContactPopup');
+        
+        function openDirectContactPopup() {
+            directContactPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeDirectContactPopupFn() {
+            directContactPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        directContactBtn.addEventListener('click', openDirectContactPopup);
+        closeDirectContactPopup.addEventListener('click', closeDirectContactPopupFn);
+        
+        directContactPopup.addEventListener('click', function(e) {
+            if (e.target === directContactPopup) {
+                closeDirectContactPopupFn();
+            }
+        });
+        
+        // View Model Popup
+        const viewModelBtn = document.getElementById('viewModelBtn');
+        const viewModelBtnFooter = document.getElementById('viewModelBtnFooter');
+        const viewModelPopup = document.getElementById('viewModelPopup');
+        const closeViewModelPopup = document.getElementById('closeViewModelPopup');
+        
+        function openViewModelPopup() {
+            viewModelPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeViewModelPopupFn() {
+            viewModelPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        viewModelBtn.addEventListener('click', openViewModelPopup);
+        viewModelBtnFooter.addEventListener('click', openViewModelPopup);
+        closeViewModelPopup.addEventListener('click', closeViewModelPopupFn);
+        
+        viewModelPopup.addEventListener('click', function(e) {
+            if (e.target === viewModelPopup) {
+                closeViewModelPopupFn();
+            }
+        });
+        
+        // VR Tour
+        const vrTour = document.getElementById('vrTour');
+        
+        vrTour.addEventListener('click', function() {
+            window.open('https://hailongvr360.com/projects/canho360/', '_blank');
+        });
+        
+        // Map Button
+        const mapBtn = document.getElementById('mapBtn');
+        
+        mapBtn.addEventListener('click', function() {
+            window.open('https://www.google.com/maps/place/K%C4%90T+M%E1%BB%97+Lao,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i', '_blank');
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const popupForm = document.getElementById('popupForm');
+        const viewModelForm = document.getElementById('viewModelForm');
+        
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> ĐANG GỬI...';
+            submitBtn.disabled = true;
+            
+            // Simulate API request delay
+            setTimeout(() => {
+                alert('Cảm ơn quý khách đã gửi thông tin. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!');
+                event.target.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                if (event.target === popupForm) {
+                    closeContactPopupFn();
+                } else if (event.target === viewModelForm) {
+                    closeViewModelPopupFn();
+                }
+            }, 1500);
+        }
+        
+        contactForm.addEventListener('submit', handleFormSubmit);
+        popupForm.addEventListener('submit', handleFormSubmit);
+        viewModelForm.addEventListener('submit', handleFormSubmit);
+        
+        // Gallery Buttons
+        const galleryBtns = document.querySelectorAll('.gallery-btn');
+        
+        galleryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                let imageSrc;
+                
+                // Set image source based on type
+                switch (type) {
+                    case '1pn':
+                        imageSrc = 'C:\abubu\assets\ch\1pn\1.1.png';
+                        break;
+                    case '2pn':
+                        imageSrc = 'C:\abubu\assets\ch\2pn\2.1.png';
+                        break;
+                    case '3pn':
+                        imageSrc = 'C:\abubu\assets\ch\3pn\3.1.png';
+                        break;
+                    default:
+                        imageSrc = 'C:\abubu\assets\ch\1pn\1.1.png';
+                }
+                
+                openZoomModal(imageSrc);
+            });
+        });
+    </script>
+<script>
+document.getElementById('mapBtn').onclick = function() {
+    document.getElementById('mapModal').classList.remove('hidden');
+};
+document.getElementById('closeMapModal').onclick = function() {
+    document.getElementById('mapModal').classList.add('hidden');
+};
+// Đóng modal khi click ra ngoài vùng popup
+document.getElementById('mapModal').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.add('hidden');
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const items = document.querySelectorAll("#floorPlanCarousel .carousel-item");
+    let current = 0;
+    function showSlide(idx) {
+        items.forEach((item, i) => item.classList.toggle('active', i === idx));
+    }
+    showSlide(current);
+    setInterval(() => {
+        current = (current + 1) % items.length;
+        showSlide(current);
+    }, 3500); // 3.5 giây tự chuyển ảnh, bạn có thể chỉnh lại số này
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqcueuQBMk-0PmKcgNZ3H13BR01UlHj7Y97P67YoIV3V0ZAmmmeRnz5xQeHHRKKRo-3Q/exec';
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('submitSuccessMsg');
+
+    if (form) {
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> ĐANG GỬI...';
+            if(successMsg) successMsg.style.display = 'none';
+
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(scriptURL, { method: 'POST', body: formData });
+                if (response.ok) {
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> GỬI THÔNG TIN';
+                    if(successMsg) successMsg.style.display = 'block';
+                } else {
+                    alert('Có lỗi khi gửi biểu mẫu, vui lòng thử lại.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> GỬI THÔNG TIN';
+                }
+            } catch (error) {
+                alert('Có lỗi xảy ra khi gửi biểu mẫu. Hãy thử lại hoặc liên hệ trực tiếp.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> GỬI THÔNG TIN';
+            }
+        });
+    }
+});
+</script>
+
+
+<script>
+// Infinity slider
+(function() {
+    const slider = document.getElementById('infinitySlider');
+    if (!slider) return;
+    const imgs = Array.from(slider.children);
+    imgs.forEach(img => { slider.appendChild(img.cloneNode(true)); });
+
+    let px = 0;
+    let speed = 1.1;
+    const totalWidth = imgs.length * (imgs[0].width + 24);
+
+    function animate() {
+        px -= speed;
+        if (Math.abs(px) >= totalWidth) px = 0;
+        slider.scrollLeft = Math.abs(px);
+        requestAnimationFrame(animate);
+    }
+    animate();
+    slider.addEventListener('pointerdown', e => e.preventDefault());
+})();
+
+// Lightbox
+const modal = document.getElementById('lightboxModal');
+const modalImg = document.getElementById('lightboxImg');
+const closeBtn = document.getElementById('lightboxClose');
+const prevBtn = document.getElementById('lightboxPrev');
+const nextBtn = document.getElementById('lightboxNext');
+const imgsLight = document.querySelectorAll('#infinitySlider img');
+let imgLength = imgsLight.length/2; // Số ảnh gốc
+let currentIdx = 0;
+function openModal(idx) {
+    currentIdx = idx % imgLength;
+    modalImg.src = imgsLight[currentIdx].src;
+    modal.style.display = 'flex';
+}
+function closeModal() {
+    modal.style.display = 'none';
+    modalImg.src = "";
+}
+function showPrev() {
+    currentIdx = (currentIdx - 1 + imgLength) % imgLength;
+    modalImg.src = imgsLight[currentIdx].src;
+}
+function showNext() {
+    currentIdx = (currentIdx + 1) % imgLength;
+    modalImg.src = imgsLight[currentIdx].src;
+}
+imgsLight.forEach((img,i) => {
+    if(i<imgLength) img.addEventListener('click', () => openModal(i));
+});
+if(closeBtn) closeBtn.onclick = closeModal;
+if(prevBtn) prevBtn.onclick = showPrev;
+if(nextBtn) nextBtn.onclick = showNext;
+window.addEventListener('keydown', (e) => {
+    if(!modal || modal.style.display==='none') return;
+    if(e.key === 'Escape') closeModal();
+    if(e.key === 'ArrowRight') showNext();
+    if(e.key === 'ArrowLeft') showPrev();
+});
+modal && modal.addEventListener('click', function(e) {
+    if(e.target === modal) closeModal();
+});
+</script>
+<!-- Floating Virtual Tour Icon -->
+<a href="#virtual-tour" id="virtualTourFloatingBtn" title="Trải nghiệm thực tế ảo">
+  <span class="floating-virtual-tour-icon">
+    <i class="fas fa-vr-cardboard"></i>
+  </span>
+</a>
+
+<style>
+.floating-virtual-tour-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    height: 57px;
+    background: linear-gradient(135deg,#ffd700,#ffb400 83%);
+    color: #222;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.19);
+    position: fixed;
+    bottom: 26px;
+    left: 28px;
+    z-index: 11111;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 2px solid #fff7b0;
+    opacity: 0.92;
+}
+.floating-virtual-tour-icon:hover {
+    box-shadow:0 12px 46px #ffc700b0, 0 8px 60px #fff7b0cc;
+    transform: scale(1.12);
+    opacity: 1;
+}
+@media (max-width:700px) {
+  .floating-virtual-tour-icon {width:46px;height:46px;font-size:1.45rem;left:14px;bottom:16px;}
+}
+</style>
+<!-- Floating Call & Facebook Icons -->
+<div class="fixed-contact-icons">
+  <!-- Call icon -->
+  <a href="tel:0916865365" class="fixed-icon phone-icon" title="Gọi tư vấn Kepler Tower">
+    <span class="pulse"></span>
+    <i class="fas fa-phone-alt"></i>
+  </a>
+  <!-- Facebook icon -->
+  <a href="https://www.facebook.com/profile.php?id=61574578577645" target="_blank" rel="noopener" class="fixed-icon fb-icon" title="Chat Facebook Kepler Tower">
+    <span class="glow"></span>
+    <i class="fab fa-facebook-messenger"></i>
+  </a>
+</div>
+<!-- Floating Call & Facebook Icons -->
+<div class="fixed-contact-icons">
+  <!-- Call icon -->
+  <a href="tel:0916865365" class="fixed-icon phone-icon" title="Gọi tư vấn Kepler Tower">
+    <span class="pulse"></span>
+    <i class="fas fa-phone-alt"></i>
+  </a>
+  <!-- Facebook icon -->
+  <a href="https://www.facebook.com/profile.php?id=61574578577645" target="_blank" rel="noopener" class="fixed-icon fb-icon" title="Chat Facebook Kepler Tower">
+    <span class="glow"></span>
+    <i class="fab fa-facebook-messenger"></i>
+  </a>
+</div>
+
+<style>
+.fixed-contact-icons {
+  position: fixed;
+  right: 26px;
+  bottom: 36px;
+  z-index: 99990;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fixed-icon {
+  position: relative;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2b2a4c 60%, #5f59f7 100%);
+  color: #fff;
+  font-size: 2.2rem;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 6px 32px #1b193370;
+  cursor: pointer;
+  transition: transform .18s cubic-bezier(.22,1.5,.43,1.19), box-shadow .2s;
+  overflow: visible;
+  border: 2.5px solid #fff;
+}
+.fixed-icon:hover {
+  transform: scale(1.13) rotate(-6deg);
+  box-shadow: 0 2px 26px 8px #ffeba7b5, 0 0 48px #c3b7ffb6;
+}
+.phone-icon {
+  background: radial-gradient(circle at 70% 30%, #ffd700 70%, #ff9300 100%);
+  color: #322500;
+  animation: ring 1.35s infinite cubic-bezier(.68,-0.2,.9,1.5);
+  box-shadow: 0 0 22px 3px #ffd70078;
+}
+.fb-icon {
+  background: linear-gradient(135deg, #285bed 60%, #25c5fa 100%);
+  color: #fff;
+  animation: fb-glow 1.5s infinite alternate;
+  box-shadow: 0 0 24px 4px #3e7fff55;
+}
+.fixed-icon .pulse,
+.fixed-icon .glow {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 115%; height: 115%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.phone-icon .pulse {
+  box-shadow: 0 0 24px 9px #ffd700cc, 0 0 0 #ffb93000;
+  animation: pulseRing 1.4s infinite cubic-bezier(.78,.21,.48,.94);
+}
+.fb-icon .glow {
+  box-shadow: 0 0 20px 7px #53e1ffbb, 0 0 50px 9px #55caff2c, 0 0 0 #f0f8ff00;
+  animation: pulseGlow 1.2s infinite cubic-bezier(.42,.65,.74,1.15);
+}
+
+@keyframes ring {
+  0% { transform: scale(1) rotate(-6deg);}
+  7% { transform: scale(1.14) rotate(3deg);}
+  15% { transform: scale(0.95) rotate(-3deg);}
+  26% { transform: scale(1.08) rotate(2deg);}
+  38% { transform: scale(1) rotate(-3deg);}
+  48% { transform: scale(1.10);}
+  54% { transform: scale(1.18);}
+  60% { transform: scale(0.98);}
+  100% { transform: scale(1) rotate(-6deg);}
+}
+@keyframes fb-glow {
+  from { box-shadow: 0 0 16px #2fd5ff, 0 0 34px #285bed70;}
+  to { box-shadow: 0 0 36px 8px #fff, 0 0 64px 16px #60efff85;}
+}
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 20px 4px #ffd700cc, 0 0 0 0 #ffb93044;}
+  40% { box-shadow: 0 0 38px 11px #ffd700a0, 0 0 0 20px #ffb93022;}
+  65% { box-shadow: 0 0 42px 16px #ffd70044, 0 0 0 36px #ffd70022;}
+  100% { box-shadow: 0 0 18px 3px #ffd700cc, 0 0 0 0 #ffb93000;}
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 22px 9px #53e1ff77, 0 0 0 0 #23def644;}
+  50% { box-shadow: 0 0 42px 19px #ffffff22, 0 0 24px 19px #44c7ec22;}
+  100% { box-shadow: 0 0 32px 18px #53e1ffbb, 0 0 42px 16px #55caff22;}
+}
+@media (max-width:750px) {
+  .fixed-contact-icons {
+    right: 14px; bottom: 15px; gap: 16px;
+  }
+  .fixed-icon { width: 42px; height: 42px; font-size: 1.18rem; }
+}
+</style>
+
+
+
+</body>
+</html>
